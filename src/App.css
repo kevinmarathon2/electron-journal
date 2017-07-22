@@ -24,6 +24,7 @@
 }
 .maindiv {
   width: 500px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +35,12 @@
   padding: 8px;
   margin: 8px;
   border: 2px solid gray;
+  background-color: #e6ecf0;
+  border: 1px solid #ccd6dd;
+}
+
+.WritingSpace input {
+  background-color: #e6ecf0;
 }
 
 @keyframes blinking {
@@ -56,4 +63,15 @@
 .writtingSpace {
   display: flex;
   flex-direction: column;
+}
+
+.arrow {
+  fill: rgba(230, 236, 240, 0.21);
+  stroke-width: 5;
+  fill-rule: evenodd;
+  transition: fill 1s;
+}
+.arrow:hover {
+  fill: rgba(230, 236, 240, 1);
+  height: 10px;
 }

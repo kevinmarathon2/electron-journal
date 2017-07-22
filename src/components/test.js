@@ -86,7 +86,9 @@ class WritingSpace extends Component {
       ]
     };
   }
-
+  componentDidMount() {
+    this.setState({ data: this.props.savedData });
+  }
   lineEdit(key, newvalue, event) {
     console.log(event);
     let copyofState = this.state.data;
