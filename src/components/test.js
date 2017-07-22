@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Rx from "rxjs/Rx";
-import HtmlToReact from "html-to-react";
 //var cheerio = require("cheerio");
 
 class Line extends Component {
