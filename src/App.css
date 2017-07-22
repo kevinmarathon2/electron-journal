@@ -1,0 +1,59 @@
+.App {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font: 16px arial, sans-serif;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 7fr;
+}
+
+.top {
+  grid-column: 1 / 4;
+  background-color: rgb(51, 56, 66);
+  height: 50px;
+  width: 100%;
+  border-bottom-color: gray;
+}
+
+.bottom {
+  background-color: #282c34;
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maindiv {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
+.WritingSpace {
+  padding: 8px;
+  margin: 8px;
+  border: 2px solid gray;
+}
+
+@keyframes blinking {
+  0%,
+  100% {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.line {
+  border: none;
+  outline: none;
+  min-width: 300px;
+  font: 16px arial, sans-serif;
+}
+
+.writtingSpace {
+  display: flex;
+  flex-direction: column;
+}
