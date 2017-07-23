@@ -38,8 +38,13 @@ class Line extends Component {
     });
   }
   keyPress(e) {
+    console.log(e.key);
     if (e.key === "Enter") {
       this.props.newLine(this.props.itemkey);
+    } else if (e.key === "ArrowUp") {
+      this.props.moveUpOrDown(this.props.itemkey, "Up");
+    } else if (e.key === "ArrowDown") {
+      this.props.moveUpOrDown(this.props.itemkey, "Down");
     }
   }
   focus() {
@@ -74,10 +79,12 @@ class Line extends Component {
       );
   }
 }
-
+var m = [];
 class WritingSpace extends Component {
   constructor() {
     super();
+
+    this.linelist = "hello";
     this.state = {
       data: [
         { element: "div", text: "line 1" },
@@ -86,6 +93,7 @@ class WritingSpace extends Component {
     };
   }
   componentDidMount() {
+    // console.log(this.props.children);
     this.setState({ data: this.props.savedData });
   }
   lineEdit(key, newvalue, event) {
@@ -120,6 +128,13 @@ class WritingSpace extends Component {
     copyData.splice(itemkey, 1);
     this.setState({ data: copyData });
   }
+
+  moveUpOrDown(itemkey, direction) {
+    if (direction === "Up") {
+      console.log(m[itemkey - 1]);
+      m[itemkey - 1].focus();
+    }
+  }
   render() {
     return (
       <div className="WritingSpace">
@@ -127,14 +142,19 @@ class WritingSpace extends Component {
           if (item.element === "div") {
             return (
               <Line
+                className="line"
                 editmode={true}
                 lineEdit={this.lineEdit.bind(this)}
+                moveUpOrDown={this.moveUpOrDown.bind(this)}
                 itemkey={key}
                 text={item.text}
                 key={key}
                 onPaste={this.linePaste.bind(this)}
                 ref={input => {
-                  this.lineInput = input;
+                  // this.lineInput = input;
+                  m[key] = input;
+                  // console.log(m);
+                  //console.log(this.refs);
                 }}
                 newLine={this.newLine.bind(this)}
               />

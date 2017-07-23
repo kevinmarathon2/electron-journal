@@ -4,6 +4,18 @@ import fakeData from "./components/fakeData.js";
 //import WritingSpace from "./components/writingSpace.js";
 import WritingSpace from "./components/test.js";
 
+// import low from "lowdb";
+
+// const db = low("data.json");
+// db.get("posts").push({ id: 1, title: "kevin is awesome" }).write();
+// db.set("user.sdfsdfsdfname", "he;;p").write("copy.json");
+
+// console.log(db.getState());
+// console.log(db);
+
+//localStorage.setItem("lastname", "Smith");
+
+//console.log(localStorage.getItem("lastname"));
 class App extends Component {
   render() {
     return (
