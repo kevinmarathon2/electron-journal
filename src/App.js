@@ -3,13 +3,12 @@ import "./App.css";
 import fakeData from "./components/fakeData.js";
 //import WritingSpace from "./components/writingSpace.js";
 import WritingSpace from "./components/test.js";
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="top">
-          hello {console.log("test")}{" "}
-        </div>
+        <div className="top">hello</div>
         <div className="bottom">
           <div className="leftSideBar">
             <svg width="80" height="100">
@@ -18,8 +17,7 @@ class App extends Component {
           </div>
           <div className="maindiv">
             {fakeData.map((iteminfo, key) => {
-              console.log(iteminfo);
-              return <WritingSpace key={key} savedData={iteminfo} />;
+              return <WritingSpace key={key} savedData={iteminfo.data} />;
             })}
           </div>
           <div className="rightSideBar">
