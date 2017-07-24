@@ -17,6 +17,7 @@ import WritingSpace from "./components/test.js";
 
 //console.log(localStorage.getItem("lastname"));
 class App extends Component {
+  addNew() {}
   render() {
     return (
       <div className="App">
@@ -31,6 +32,11 @@ class App extends Component {
             {fakeData.map((iteminfo, key) => {
               return <WritingSpace key={key} savedData={iteminfo.data} />;
             })}
+
+            <div className="addButton" onClick={this.addNew}>
+              {" "}+
+            </div>
+            <div />
           </div>
           <div className="rightSideBar">
             <svg width="80" height="100">

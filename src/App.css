@@ -75,3 +75,11 @@
   fill: rgba(230, 236, 240, 1);
   height: 10px;
 }
+
+.addButton {
+  font-size: 26px;
+  padding: 8px 17px;
+  border-radius: 24px;
+  background-color: #528bff;
+  align-self: flex-end;
+}
