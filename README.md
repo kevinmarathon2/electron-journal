@@ -1,1 +1,1 @@
-A notetaking app that bases it self on sorting things out by date, making it sort of a journal
+A notetaking app that bases it self on sorting things out by date, making it sort of a journal. Created using React

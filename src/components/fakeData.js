@@ -17,4 +17,5 @@ var fakeElement2 = {
 fakeData.push(fakeElement);
 fakeData.push(fakeElement2);
 
-export default fakeData;
+//export default fakeData;
+module.exports = fakeData;

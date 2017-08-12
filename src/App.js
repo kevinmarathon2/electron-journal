@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import fakeData from "./components/fakeData.js";
 //import WritingSpace from "./components/writingSpace.js";
-import WritingSpace from "./components/test.js";
+import WritingSpace from "./components/writingSpace.js";
 
 // import low from "lowdb";
 
@@ -17,7 +17,9 @@ import WritingSpace from "./components/test.js";
 
 //console.log(localStorage.getItem("lastname"));
 class App extends Component {
-  addNew() {}
+  addNew() {
+    //fakeData.push()
+  }
   render() {
     return (
       <div className="App">

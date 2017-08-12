@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fake data is not empty 1`] = `
+Array [
+  Object {
+    "data": Array [
+      Object {
+        "element": "div",
+        "text": "li item first on the hournal",
+      },
+      Object {
+        "element": "div",
+        "text": "line two",
+      },
+    ],
+  },
+  Object {
+    "data": Array [
+      Object {
+        "element": "div",
+        "text": "li item first on the hournal",
+      },
+      Object {
+        "element": "div",
+        "text": "line two",
+      },
+    ],
+  },
+]
+`;
